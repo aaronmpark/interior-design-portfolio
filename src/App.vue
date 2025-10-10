@@ -9,6 +9,9 @@ export default {
   name: 'App',
   components: {
     Footnote
+  },
+  mounted() {
+    document.title = "Golden MS - Interior Design";
   }
 }
 </script>
@@ -20,7 +23,6 @@ html, body {
   box-sizing: border-box;
 }
 
-/* change these values later -- not much else to change in this App.vue i believe*/
 #app {
   margin: 0;
   padding: 0;

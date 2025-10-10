@@ -2,7 +2,10 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">
-        <a href="/" @click.prevent="goHome">Golden MS</a>
+        <a href="/" @click.prevent="goHome">
+            <img src="@/assets/logo.png" alt="Logo" class="logo-image" />
+            Golden MS
+        </a>
       </div>
       <ul class="navbar-links">
         <li v-for="link in navLinks" :key="link.id" @click="setActive(link.title)" :class="{ active: active === link.title }">
@@ -70,6 +73,12 @@ export default {
   font-weight: bold;
   text-decoration: none;
 }
+.navbar-logo .logo-image {
+  width: 15px; 
+  height: 15px;
+  margin-right: 0.2rem;
+}
+
 
 .navbar-links {
   list-style: none;
@@ -81,6 +90,7 @@ export default {
 
 .navbar-links li {
   cursor: pointer;
+  position: relative;
 }
 
 .navbar-links a {
@@ -90,12 +100,20 @@ export default {
   font-weight: 500;
 }
 
-.navbar-links li.active a {
-  color: #00bcd4;
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; 
+  left: 50%; 
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center; 
+  width: 100%; 
+  height: 2px; 
+  background-color: #ffffff; 
+  transition: transform 0.3s ease; 
 }
 
-/* change this so that when it hovers, it will have an affect */
-.navbar-links a:hover {
-  color: #00bcd4;
+.navbar-links a:hover::after {
+  transform: translateX(-50%) scaleX(1);
 }
 </style>

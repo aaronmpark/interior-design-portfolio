@@ -1,6 +1,11 @@
 <template>
   <footer class="footnote">
     <div class="footnote-container">
+      <div class="contact-info">
+        <h3>CONTACT</h3>
+        <p><a href="mailto:example@email.com">Email example@email.com</a></p>
+        <p><a href="tel:+1234567890">Phone: +1 (234) 567-890</a></p>
+      </div>
       <div class="contact-form">
         <h3>GET IN TOUCH</h3>
         <form @submit.prevent="submitForm">
@@ -16,11 +21,17 @@
           <button type="submit">Contact Now</button>
         </form>
       </div>
-      <div class="contact-info">
-        <h3>CONTACT</h3>
-        <p><a href="mailto:example@email.com">Email example@email.com</a></p>
-        <p><a href="tel:+1234567890">Phone: +1 (234) 567-890</a></p>
+        <div class="other">
+        <h3>Why Us</h3>
+        <p>Our Story</p>
+        <p>Business</p>
       </div>
+    </div>
+    <div class="footer-bottom">
+        <a>
+            <img src="@/assets/logo.png" alt="Logo" class="footer-logo" />
+           Copyright &copy; 2025 Golden MS LLC All Rights Reserved.
+        </a>
     </div>
   </footer>
 </template>
@@ -58,13 +69,14 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
 .contact-form {
-  max-width: 500px;
+  max-width: 400px;
   flex: 1;
+  text-align: left;
 }
 
 .contact-form h3 {
@@ -74,6 +86,8 @@ export default {
 .contact-form label {
   display: block;
   margin: 0.5rem 0 0.2rem;
+  color: rgb(175, 173, 173) 
+
 }
 
 .contact-form input,
@@ -86,8 +100,8 @@ export default {
 }
 
 .contact-form button {
-  background-color: #132388;
-  color: white;
+  background-color: #ffffff;
+  color: black;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -95,13 +109,13 @@ export default {
 }
 
 .contact-form button:hover {
-  background-color: #0097a7;
+  background-color: #c4c1c1a8;
 }
 
 .contact-info {
   flex: 1;
   max-width: 300px;
-  text-align: right;
+  text-align: left;
 }
 .contact-info h3 {
   margin-bottom: 1rem;
@@ -109,10 +123,33 @@ export default {
 
 .contact-info p {
   margin: 0 0 1rem;
+  color: rgb(175, 173, 173) 
 }
 
 .contact-info a {
   color: inherit; 
   text-decoration: none; 
+}
+
+.other {
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+}
+.other p {
+  color: rgb(175, 173, 173);
+}
+.footer-logo {
+  width: 15px; 
+  height: 15px;
+  margin-right: 5rem;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem; 
+  padding-bottom: 0; 
+  color: rgb(175, 173, 173)
 }
 </style>
