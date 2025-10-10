@@ -1,14 +1,14 @@
 <template>
   <router-view />
-  <Home/>
+  <Footnote />
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Footnote from './components/Footnote.vue'
 export default {
   name: 'App',
   components: {
-    Home
+    Footnote
   }
 }
 </script>
@@ -20,11 +20,14 @@ html, body {
   box-sizing: border-box;
 }
 
+/* change these values later -- not much else to change in this App.vue i believe*/
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
   color: #2c3e50;
   margin-top: 60px;
 }

@@ -1,12 +1,13 @@
 <template>
     <div class="home">
-        <Navbar />
-        <h1>Home</h1> 
+        <Navbar /> 
+        <img :src="example" alt="Example Image" class="example-image" />
         <div class="space"></div>
     </div> 
 </template>
 
 <script>
+import example from '../assets/example.jpg';
 import Navbar from './Navbar.vue';
 
 export default {
@@ -15,6 +16,11 @@ export default {
     Navbar
   },
   props: {
+  },
+  data() {
+    return {
+      example
+    };
   }
 }
 </script>
@@ -23,5 +29,11 @@ export default {
 <style scoped>
 .space {
   height: 2000px; /* Adds space to allow scrolling */
+}
+
+.example-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 </style>

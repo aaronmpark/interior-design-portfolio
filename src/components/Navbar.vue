@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">
-        <a href="/" @click.prevent="goHome">Home</a>
+        <a href="/" @click.prevent="goHome">Golden MS</a>
       </div>
       <ul class="navbar-links">
         <li v-for="link in navLinks" :key="link.id" @click="setActive(link.title)" :class="{ active: active === link.title }">
@@ -94,6 +94,7 @@ export default {
   color: #00bcd4;
 }
 
+/* change this so that when it hovers, it will have an affect */
 .navbar-links a:hover {
   color: #00bcd4;
 }
