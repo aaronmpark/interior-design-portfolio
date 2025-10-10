@@ -2,6 +2,7 @@
     <div class="home">
         <Navbar />
         <h1>sup</h1> 
+        <div class="spacer"></div>
     </div> 
 </template>
 
@@ -20,5 +21,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.spacer {
+  height: 2000px; /* Adds space to allow scrolling */
+}
 </style>
