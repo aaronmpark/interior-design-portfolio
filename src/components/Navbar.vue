@@ -6,7 +6,7 @@
       </div>
       <ul class="navbar-links">
         <li v-for="link in navLinks" :key="link.id" @click="setActive(link.title)" :class="{ active: active === link.title }">
-          <a :href="`#${link.id}`">{{ link.title }}</a>
+          <a :href="`/${link.id}`">{{ link.title }}</a>
         </li>
       </ul>
     </div>
@@ -25,7 +25,7 @@ export default {
         { id: 'career', title: 'Career' }
       ]
     };
-  },    
+  },
   methods: {
     setActive(title) {
       this.active = title;
@@ -57,8 +57,11 @@ export default {
   align-items: center;
   width: 100%;
   padding: 0 1rem;
-  margin: 0; /* Remove any default margin */
-  box-sizing: border-box; /* Ensure padding is included in width */
+  max-width: 1500px;
+}
+
+.navbar-logo {
+  margin-left: 20rem;
 }
 
 .navbar-logo a {
