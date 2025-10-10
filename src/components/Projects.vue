@@ -1,7 +1,7 @@
 <template>
-    <div class="home">
+    <div class="projects">
         <Navbar />
-        <h1>Home</h1> 
+        <h1>Projects</h1> 
         <div class="space"></div>
     </div> 
 </template>
@@ -10,7 +10,7 @@
 import Navbar from './Navbar.vue';
 
 export default {
-  name: 'DefaultHome',  
+  name: 'DefaultProjects',  
   components: {
     Navbar
   },

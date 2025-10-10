@@ -1,7 +1,7 @@
 <template>
-    <div class="home">
+    <div class="about">
         <Navbar />
-        <h1>Home</h1> 
+        <h1>About</h1> 
         <div class="space"></div>
     </div> 
 </template>
