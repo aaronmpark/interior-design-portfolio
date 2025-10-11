@@ -130,12 +130,12 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 100%; /* Changed from 100vw to 100% to avoid scrollbar width issues */
+  width: 100%; 
   min-height: 100vh;
   padding: 0;
   box-sizing: border-box;
   background: linear-gradient(135deg, #1C1C1C, #333);
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden; 
 }
 
 .project-list {
@@ -166,6 +166,8 @@ export default {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
   transition: color 0.3s;
+  color: white;
+  font-weight: bold;
 }
 
 .project-list li:hover {
@@ -174,8 +176,7 @@ export default {
 }
 
 .project-list .location {
-  font-weight: bold;
-  color: white;
+    color:  #b2b1b1;
 }
 
 .project-collage {
