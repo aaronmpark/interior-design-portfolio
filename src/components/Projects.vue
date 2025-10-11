@@ -44,7 +44,7 @@
             </ul>
         </div>
         <div class="project-collage">
-            <h2>All Photos</h2>
+            <h1>All Photos</h1>
             <div class="collage">
                 <img v-for="(image, index) in images" :key="index" :src="image" @click="openGallery(index)" class="collage-image" />
             </div>
@@ -128,16 +128,18 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: flex-start;
-  width: 100vw;
+  width: 100%; /* Changed from 100vw to 100% to avoid scrollbar width issues */
   min-height: 100vh;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(135deg, #1C1C1C, #333); 
+  background: linear-gradient(135deg, #1C1C1C, #333);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .project-list {
+  align-self: stretch; 
   border-bottom: 2px solid #FFB606; 
   padding-bottom: 1rem;
   margin-bottom: 2rem;
@@ -179,7 +181,8 @@ export default {
 .project-collage {
   margin-top: 2rem;
   width: 100%;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
+  color:white; 
 }
 
 .collage {
@@ -280,7 +283,7 @@ export default {
 }
 
 .thumbnail-image {
-  width: 70px;
+  width: 50px;
   height: auto;
   margin: 0 0.5rem;
   cursor: pointer;

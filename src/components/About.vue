@@ -44,11 +44,12 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center; 
-  width: 100vw;
+  width: 100%;
   background: url('../assets/about_background.jpg') no-repeat center center fixed; 
   background-size: cover;
   background-color: rgba(28, 28, 28, 0.3); 
   background-blend-mode: lighten; 
+  overflow-x: hidden;
 }
 
 .about-content {

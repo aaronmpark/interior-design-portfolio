@@ -63,6 +63,7 @@ export default {
   background-color: #1C1C1C;
   color: white;
   padding: 2rem;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .footnote-container {
@@ -71,6 +72,8 @@ export default {
   align-items: flex-start;
   max-width: 1500px;
   margin: 0 auto;
+  width: 100%; /* Ensure the container spans the full width */
+  box-sizing: border-box; /* Include padding and borders in width calculations */
 }
 
 .contact-form {
@@ -148,8 +151,10 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 2rem; 
-  padding-bottom: 0; 
-  color: rgb(175, 173, 173)
+  margin-top: 2rem;
+  padding-bottom: 0;
+  color: rgb(175, 173, 173);
+  width: 100%; /* Ensure it spans the full width */
+  box-sizing: border-box; /* Include padding and borders in width calculations */
 }
 </style>
