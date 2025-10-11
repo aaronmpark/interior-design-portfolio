@@ -88,17 +88,25 @@ export default {
 .contact-form label {
   display: block;
   margin: 0.5rem 0 0.2rem;
-  color: rgb(175, 173, 173) 
-
+  color: rgb(175, 173, 173);
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.5rem 0; 
   margin-bottom: 1rem;
-  border: 1px solid #ffffff;
-  border-radius: 4px;
+  border: none; 
+  border-bottom: 2px solid #FFB606; 
+  border-radius: 0; 
+  background: transparent; 
+  color: white; 
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none; 
+  border-bottom: 2px solid #FFD700;
 }
 
 .contact-form button {
