@@ -35,8 +35,8 @@ export default {
 .home {
   position: relative;
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
+  justify-content: center; 
+  align-items: center; 
   width: 100vw;
   height: 100vh;
 }
@@ -60,11 +60,11 @@ export default {
 
 .home-text {
   position: absolute;
-  text-align: center; /* Centers the text */
-  color: white; /* Makes the text stand out on the image */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a shadow for better readability */
+  text-align: center; 
+  color: white; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
   transform: translateY(-10%);
-  z-index: 2; /* Ensures the text is above the overlay */
+  z-index: 2; 
 }
 
 .home-text h1 {
@@ -88,15 +88,15 @@ export default {
   font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
-  text-decoration: none; /* Removes underline from the link */
-  display: inline-block; /* Makes the link behave like a button */
+  text-decoration: none; 
+  display: inline-block; 
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin: 1rem 0;
   text-shadow: none;
 }
 
 .home-button:hover {
-  transform: scale(1.1); /* Slight zoom effect */
+  transform: scale(1.1); 
 }
 
 </style>
