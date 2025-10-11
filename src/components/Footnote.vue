@@ -29,7 +29,6 @@
     </div>
     <div class="footer-bottom">
         <a>
-            <img src="@/assets/logo.png" alt="Logo" class="footer-logo" />
            Copyright &copy; 2025 Golden MS LLC All Rights Reserved.
         </a>
     </div>

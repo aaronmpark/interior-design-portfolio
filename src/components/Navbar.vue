@@ -3,7 +3,6 @@
     <div class="navbar-container">
       <div class="navbar-logo">
         <a href="/" @click.prevent="goHome">
-            <img src="@/assets/logo.png" alt="Logo" class="logo-image" />
             Golden MS
         </a>
       </div>
@@ -25,7 +24,6 @@ export default {
       navLinks: [
         { id: 'about', title: 'ABOUT' },
         { id: 'projects', title: 'PROJECTS' },
-        { id: 'career', title: 'CAREER' }
       ]
     };
   },
