@@ -131,33 +131,27 @@ export default {
   align-items: stretch;
   justify-content: flex-start;
   width: 100vw;
-  min-height: 100vh; 
+  min-height: 100vh;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden; 
-  background: url('../assets/about_background.jpg') no-repeat center center fixed; 
-  background-size: cover;
-  background-color: rgba(28, 28, 28, 0.3); 
-  background-blend-mode: lighten; 
+  background: linear-gradient(135deg, #1C1C1C, #333); 
 }
 
 .project-list {
+  border-bottom: 2px solid #FFB606; 
+  padding-bottom: 1rem;
   margin-bottom: 2rem;
-  text-align: left;
-  padding: 0; 
-  align-self: flex-start; 
-  color: white;
 }
 
 .project-list h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif; 
+  font-size: 2.5rem;
+  color: #FFB606;
 }
 
 .project-list ul {
   list-style: none;
   padding: 0;
-  color: white;
 }
 
 .project-list ul ul {
@@ -166,25 +160,26 @@ export default {
 }
 
 .project-list li {
-  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: white;
+  transition: color 0.3s;
+}
+
+.project-list li:hover {
+  color: #FFB606; 
+  cursor: pointer;
 }
 
 .project-list .location {
   font-weight: bold;
-  color:  #9c9c9c; 
+  color: white;
 }
 
 .project-collage {
   margin-top: 2rem;
   width: 100%;
-  margin-bottom: 3rem; 
-  color:  #3B3B3B;
-}
-
-.project-collage h2 {
-  color: white;
+  margin-bottom: 2rem; 
 }
 
 .collage {
@@ -196,15 +191,28 @@ export default {
 
 .collage-image {
   width: 100%;
-  height: 300px; 
-  object-fit: cover; 
+  height: 350px; 
+  object-fit: cover;
   cursor: pointer;
   border-radius: 8px;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s; 
+  animation: fadeIn 0.5s ease-in-out; 
 }
 
 .collage-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .gallery-popup {
@@ -272,7 +280,7 @@ export default {
 }
 
 .thumbnail-image {
-  width: 50px;
+  width: 70px;
   height: auto;
   margin: 0 0.5rem;
   cursor: pointer;
@@ -281,13 +289,7 @@ export default {
   transition: border-color 0.2s;
 }
 
-button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
+.thumbnail-image.active-thumbnail {
+  border-color: #FFB606;
 }
-
 </style>
