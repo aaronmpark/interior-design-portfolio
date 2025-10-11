@@ -3,7 +3,7 @@
     <div class="footnote-container">
       <div class="contact-info">
         <h3>CONTACT</h3>
-        <p><a href="mailto:example@email.com">Email example@email.com</a></p>
+        <p><a href="mailto:example@email.com">Email: example@email.com</a></p>
         <p><a href="tel:+1234567890">Phone: +1 (234) 567-890</a></p>
       </div>
       <div class="contact-form">

@@ -65,6 +65,17 @@ export default {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
   transform: translateY(-10%);
   z-index: 2; 
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .home-text h1 {
