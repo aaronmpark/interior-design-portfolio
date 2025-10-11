@@ -11,7 +11,17 @@
           <a :href="`/${link.id}`">{{ link.title }}</a>
         </li>
       </ul>
+      <div class="navbar-toggle" @click="toggleMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
+    <ul class="navbar-links-mobile" v-if="isMenuOpen">
+      <li v-for="link in navLinks" :key="link.id" @click="setActive(link.title); toggleMenu()" :class="{ active: active === link.title }">
+        <a :href="`/${link.id}`">{{ link.title }}</a>
+      </li>
+    </ul>
   </nav>
 </template>
 
@@ -21,6 +31,7 @@ export default {
   data() {
     return {
       active: '',
+      isMenuOpen: false,
       navLinks: [
         { id: 'about', title: 'ABOUT' },
         { id: 'projects', title: 'PROJECTS' },
@@ -38,6 +49,9 @@ export default {
     },
     goHome() {
       window.location.href = '/';
+    },
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
     }
   }
 };
@@ -63,7 +77,7 @@ export default {
 }
 
 .navbar-logo {
-  margin-left: 20rem;
+  margin-left: 1rem;
 }
 
 .navbar-logo a {
@@ -72,12 +86,6 @@ export default {
   font-weight: bold;
   text-decoration: none;
 }
-.navbar-logo .logo-image {
-  width: 15px; 
-  height: 15px;
-  margin-right: 0.2rem;
-}
-
 
 .navbar-links {
   list-style: none;
@@ -114,5 +122,67 @@ export default {
 
 .navbar-links a:hover::after {
   transform: translateX(-50%) scaleX(1);
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+.navbar-links-mobile {
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+  background-color: #1C1C1C;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; 
+}
+
+.navbar-links-mobile li {
+  text-align: center;
+  padding: 0.5rem 0; 
+}
+
+.navbar-links a,
+.navbar-links-mobile a {
+  text-decoration: none; 
+  color: white; 
+}
+
+.navbar-links a:hover,
+.navbar-links a:focus,
+.navbar-links a:active,
+.navbar-links-mobile a:hover,
+.navbar-links-mobile a:focus,
+.navbar-links-mobile a:active {
+  text-decoration: none; 
+  color: #FFB606; 
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: row;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
 }
 </style>

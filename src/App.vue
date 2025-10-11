@@ -1,6 +1,6 @@
 <template>
   <router-view />
-  <Footnote />
+  <Footnote v-if="$route.path !== '/contact'" />
 </template>
 
 <script>

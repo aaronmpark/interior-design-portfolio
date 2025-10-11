@@ -4,7 +4,7 @@
         <img :src="home_image" alt="Casa Tequila" class="home-image" />
         <div class="overlay"></div> 
         <div class="home-text">
-            <h1>Golden MS Interior Design</h1>
+            <h1>Golden MS - Interior Design</h1>
             <h2>Transforming Restaurants into Unique Experiences</h2>
             <router-link to="/about" class="home-button">GET STARTED</router-link>            
         </div>

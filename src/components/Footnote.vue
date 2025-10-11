@@ -22,7 +22,7 @@
         </form>
       </div>
         <div class="other">
-        <h3>Other</h3>
+        <h3>OTHER</h3>
         <p><a href="/about">About Us</a></p>
         <p><a href="/projects">Projects</a></p>
       </div>
@@ -174,4 +174,18 @@ export default {
   box-sizing: border-box; 
   transform: translateY(165%);
 }
+
+@media (max-width: 768px) {
+  .footnote-container {
+    flex-direction: column; 
+    gap: 1.5rem; 
+  }
+
+  .contact-info,
+  .contact-form,
+  .other {
+    margin-bottom: 1.5rem; 
+  }
+}
+
 </style>
