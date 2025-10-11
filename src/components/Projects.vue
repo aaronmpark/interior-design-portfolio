@@ -154,9 +154,10 @@ export default {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  justify-items: center;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr; 
+  gap: 2rem; 
+  justify-content: center; 
+  margin-top: 1.5rem;
 }
 
 .project-item {
