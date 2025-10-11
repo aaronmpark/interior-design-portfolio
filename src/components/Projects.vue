@@ -292,7 +292,7 @@ export default {
 
 
 .project-list li a.project-link {
-  text-decoration: none; /* Remove underline */
+  text-decoration: none; 
   color: inherit;
 }
 
