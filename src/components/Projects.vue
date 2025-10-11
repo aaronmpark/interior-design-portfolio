@@ -3,45 +3,45 @@
         <Navbar />
         <div class="project-list">
             <h1>Projects</h1>
-            <ul>
-                <li>
-                    Casa Tequila
+            <div class="project-grid">
+                <div class="project-item">
+                    <a href="https://www.casatequilarestaurant.com/" class="project-link" target="_blank" rel="noopener noreferrer">Casa Tequila</a>
                     <ul>
                         <li class="location">Alexandria, VA</li>
                     </ul>
-                </li>
-                <li>
-                    Hangry Joes
+                </div>
+                <div class="project-item">
+                    <a href="https://hangryjoes.com/" class="project-link" target="_blank" rel="noopener noreferrer">Hangry Joes</a>
                     <ul>
                         <li class="location">VA Beach, VA</li>
                         <li class="location">Gainsville, VA</li>
                         <li class="location">Ashburn, VA</li>
                     </ul>
-                </li>
-                <li>
-                    WNB Factory
+                </div>
+                <div class="project-item">
+                    <a href="https://www.wnbfactory.com/" class="project-link" target="_blank" rel="noopener noreferrer">WNB Factory</a>
                     <ul>
                         <li class="location">Alexandria, VA</li>
                         <li class="location">Newington, VA</li>
                         <li class="location">Jessup, MD</li>
                     </ul>
-                </li>
-                <li>
-                    Ramen Shop
+                </div>
+                <div class="project-item">
+                    <a>Ramen Shop</a>
                     <ul>
                         <li class="location">Fredericksburg, VA</li>
                     </ul>
-                </li>
-                <li>
-                    Ice Cream Shop
+                </div>
+                <div class="project-item">
+                    <a>Ice Cream Shop</a>
                     <ul>
                         <li class="location">Annandale, VA</li>
                     </ul>
-                </li>
-                <li>
-                    Etc.
-                </li>
-            </ul>
+                </div>
+                <div class="project-item">
+                    <a>Etc.</a>
+                </div>
+            </div>
         </div>
         <div class="project-collage">
             <h1>All Photos</h1>
@@ -139,10 +139,11 @@ export default {
 }
 
 .project-list {
-  align-self: stretch; 
-  border-bottom: 2px solid #FFB606; 
+  align-self: stretch;
+  border-bottom: 2px solid #FFB606;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .project-list h1 {
@@ -151,32 +152,33 @@ export default {
   color: #FFB606;
 }
 
-.project-list ul {
-  list-style: none;
-  padding: 0;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
 }
 
-.project-list ul ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-}
-
-.project-list li {
+.project-item {
   font-family: 'Roboto', sans-serif; 
   font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s;
   color: white;
   font-weight: bold;
 }
 
-.project-list li:hover {
-  color: #FFB606; 
-  cursor: pointer;
+.project-item ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
 }
 
-.project-list .location {
-    color:  #b2b1b1;
+.project-item .location {
+  color: #b2b1b1;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .project-collage {
@@ -200,7 +202,6 @@ export default {
   cursor: pointer;
   border-radius: 8px;
   transition: transform 0.2s, box-shadow 0.2s; 
-  animation: fadeIn 0.5s ease-in-out; 
 }
 
 .collage-image:hover {
@@ -208,16 +209,6 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
 .gallery-popup {
   position: fixed;
@@ -296,4 +287,12 @@ export default {
 .thumbnail-image.active-thumbnail {
   border-color: #FFB606;
 }
+
+
+
+.project-list li a.project-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit;
+}
+
 </style>
