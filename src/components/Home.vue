@@ -1,13 +1,18 @@
 <template>
     <div class="home">
         <Navbar /> 
-        <img :src="example" alt="Example Image" class="example-image" />
-        <div class="space"></div>
+        <img :src="home_image" alt="Casa Tequila" class="home-image" />
+        <div class="overlay"></div> 
+        <div class="home-text">
+            <h1>Golden MS Interior Design</h1>
+            <h2>Transforming Restaurants into Unique Experiences</h2>
+            <router-link to="/about" class="home-button">GET STARTED</router-link>            
+        </div>
     </div> 
-</template>
+</template> 
 
 <script>
-import example from '../assets/example.jpg';
+import home_image from '../assets/casa_tequila_upscale.png';
 import Navbar from './Navbar.vue';
 
 export default {
@@ -19,21 +24,79 @@ export default {
   },
   data() {
     return {
-      example
+      home_image
     };
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.space {
-  height: 2000px; /* Adds space to allow scrolling */
+
+.home {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  width: 100vw;
+  height: 100vh;
 }
 
-.example-image {
-  max-width: 100%;
-  height: auto;
+.home-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   display: block;
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1; 
+}
+
+.home-text {
+  position: absolute;
+  text-align: center; /* Centers the text */
+  color: white; /* Makes the text stand out on the image */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a shadow for better readability */
+  transform: translateY(-10%);
+  z-index: 2; /* Ensures the text is above the overlay */
+}
+
+.home-text h1 {
+  font-size: 5rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.home-text h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  font-weight: 300;
+}
+
+.home-button {
+  background-color: #FFB606; 
+  color: #1C1C1C; 
+  border: none;
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none; /* Removes underline from the link */
+  display: inline-block; /* Makes the link behave like a button */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 1rem 0;
+  text-shadow: none;
+}
+
+.home-button:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
 </style>

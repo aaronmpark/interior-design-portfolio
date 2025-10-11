@@ -60,7 +60,7 @@ export default {
 
 <style scoped>
 .footnote {
-  background-color: #333;
+  background-color: #1C1C1C;
   color: white;
   padding: 2rem;
 }

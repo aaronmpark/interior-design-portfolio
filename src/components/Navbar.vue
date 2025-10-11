@@ -23,9 +23,9 @@ export default {
     return {
       active: '',
       navLinks: [
-        { id: 'about', title: 'About' },
-        { id: 'projects', title: 'Projects' },
-        { id: 'career', title: 'Career' }
+        { id: 'about', title: 'ABOUT' },
+        { id: 'projects', title: 'PROJECTS' },
+        { id: 'career', title: 'CAREER' }
       ]
     };
   },
@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: #333;
+  background-color: #1C1C1C;
   padding: 1rem;
   position: fixed;
   top: 0;
@@ -68,7 +68,7 @@ export default {
 }
 
 .navbar-logo a {
-  color: white;
+  color: #FFB606;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
