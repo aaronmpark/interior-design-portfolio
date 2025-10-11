@@ -2,13 +2,13 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">
-        <a href="/" @click.prevent="goHome">
+        <router-link to="/" @click.prevent="goHome">
             Golden MS
-        </a>
+        </router-link>
       </div>
       <ul class="navbar-links">
         <li v-for="link in navLinks" :key="link.id" @click="setActive(link.title)" :class="{ active: active === link.title }">
-          <a :href="`/${link.id}`">{{ link.title }}</a>
+          <router-link :to="`/${link.id}`">{{ link.title }}</router-link>
         </li>
       </ul>
       <div class="navbar-toggle" @click="toggleMenu">
@@ -19,7 +19,7 @@
     </div>
     <ul class="navbar-links-mobile" v-if="isMenuOpen">
       <li v-for="link in navLinks" :key="link.id" @click="setActive(link.title); toggleMenu()" :class="{ active: active === link.title }">
-        <a :href="`/${link.id}`">{{ link.title }}</a>
+        <router-link :to="`/${link.id}`">{{ link.title }}</router-link>
       </li>
     </ul>
   </nav>
@@ -48,7 +48,7 @@ export default {
       this.setActive('');
     },
     goHome() {
-      window.location.href = '/';
+      this.$router.push('/');
     },
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
