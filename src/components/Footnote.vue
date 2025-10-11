@@ -22,9 +22,9 @@
         </form>
       </div>
         <div class="other">
-        <h3>Why Us</h3>
-        <p>Our Story</p>
-        <p>Business</p>
+        <h3>Other</h3>
+        <p><a href="/about">About Us</a></p>
+        <p><a href="/projects">Projects</a></p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -140,6 +140,15 @@ export default {
 }
 .other p {
   color: rgb(175, 173, 173);
+}
+.other a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+.other a:hover {
+  text-decoration: none; 
+  color: inherit; 
 }
 .footer-logo {
   width: 15px; 
