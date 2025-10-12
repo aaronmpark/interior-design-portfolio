@@ -46,6 +46,11 @@ export default {
   width: 100vw;
   height: 100vh;
   display: block;
+  object-fit: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 .overlay {
@@ -112,14 +117,21 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .home-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
   .home-text {
     padding: 2rem; 
   }
-
   .home-text h1 {
     font-size: 2.5rem; 
   }
-
   .home-text h2 {
     font-size: 1.2rem; 
   }

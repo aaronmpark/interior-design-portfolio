@@ -260,14 +260,20 @@ export default {
 
 .gallery-close {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem; 
+  top: 2rem;
+  right: 1rem;
   background: none;
   color: white;
   border: none;
-  font-size: 1.5rem; 
+  font-size: 2rem;
   cursor: pointer;
   z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .gallery-close {
+    top: 3rem;
+  }
 }
 
 .gallery-thumbnails {
