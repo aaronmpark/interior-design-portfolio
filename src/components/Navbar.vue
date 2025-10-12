@@ -154,6 +154,17 @@ export default {
 .navbar-links-mobile li {
   text-align: center;
   padding: 0.5rem 0; 
+  width: 100%; 
+  border-bottom: 1px solid black; 
+}
+
+.navbar-links-mobile li:last-child {
+  border-bottom: none;
+}
+
+.navbar-links-mobile a {
+  display: block; 
+  padding: 0.5rem 1rem; 
 }
 
 .navbar-links a,
@@ -183,16 +194,16 @@ export default {
 
   .navbar-toggle {
     display: flex;
-    width: 50px; /* Increased width */
-    height: 50px; /* Increased height */
+    width: 50px; 
+    height: 50px; 
     justify-content: center;
     align-items: center;
     margin-right: 1rem;
   }
 
   .navbar-toggle span {
-    width: 30px; /* Increased width of the lines */
-    height: 4px; /* Increased height of the lines */
+    width: 30px; 
+    height: 4px; 
   }
 }
 </style>
