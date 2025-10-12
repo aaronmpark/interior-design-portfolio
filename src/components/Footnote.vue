@@ -63,8 +63,7 @@ export default {
         };
 
         await emailjs.send(serviceID, templateID, templateParams, userID);
-        alert('Message sent successfully!');
-        console.log("Form submitted:", this.form);
+        alert('I have received your message. I will get back to you as soon as possible.');
 
         this.form.name = '';
         this.form.email = '';
