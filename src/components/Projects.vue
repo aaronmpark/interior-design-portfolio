@@ -233,46 +233,46 @@ export default {
 }
 
 .gallery-image {
-  max-width: 90vw;
-  max-height: 80vh;
+  max-width: 100%;
+  max-height: 70vh; 
 }
 
 .gallery-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7); 
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.2rem; 
   z-index: 1001;
 }
 
 .gallery-nav.left {
-  left: -2rem;
+  left: 1rem; 
 }
 
 .gallery-nav.right {
-  right: -2rem;
+  right: 1rem;
 }
 
 .gallery-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 0.5rem; 
   background: none;
   color: white;
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem; 
   cursor: pointer;
+  z-index: 1001;
 }
 
 .gallery-thumbnails {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
+  flex-wrap: wrap; 
+  gap: 0.5rem; 
 }
 
 .thumbnail-image {
