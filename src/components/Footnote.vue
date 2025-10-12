@@ -123,6 +123,10 @@ export default {
   color: white; 
 }
 
+.contact-form textarea {
+  resize: none;
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none; 
