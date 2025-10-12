@@ -213,6 +213,10 @@ export default {
   .other {
     margin-bottom: 1.5rem; 
   }
+  .footer-bottom {
+    transform: translateY(20%);
+    margin-top: 1rem;
+  }
 }
 
 </style>
