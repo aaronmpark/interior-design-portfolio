@@ -32,6 +32,7 @@
 
 <script>
 import Navbar from './Navbar.vue';
+import emailjs from 'emailjs-com';
 
 export default {
   name: 'DefaultContact',
@@ -48,10 +49,28 @@ export default {
     };
   },
   methods: {
-    submitForm() {
-      this.form.name = '';
-      this.form.email = '';
-      this.form.message = '';
+    async submitForm() {
+      try {
+        const serviceID = 'service_wcbidgp'; 
+        const templateID = 'template_fdas46b';
+        const userID = 'mtNrUoEGciBHXKPvh';
+
+        const templateParams = {
+          name: this.form.name,
+          email: this.form.email,
+          message: this.form.message
+        };
+
+        await emailjs.send(serviceID, templateID, templateParams, userID);
+        alert('Message sent successfully!');
+
+        this.form.name = '';
+        this.form.email = '';
+        this.form.message = '';
+      } catch (error) {
+        console.error('Failed to send message:', error);
+        alert('Failed to send message. Please try again later.');
+      }
     }
   }
 };
