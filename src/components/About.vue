@@ -116,4 +116,39 @@ export default {
   height: auto;
   object-fit: cover;
 }
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+    transform: translateY(0);
+    padding: 2rem;
+  }
+
+  .about-text {
+    max-width: 90%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
+  
+  .about-text hr {
+    width: 50%; 
+    margin: 0 auto;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-image {
+    max-width: 90%;
+    width: 100%;
+  }
+}
 </style>
