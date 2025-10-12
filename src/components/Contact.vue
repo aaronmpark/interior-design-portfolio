@@ -94,8 +94,10 @@ export default {
 
 .contact-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  height: 100%; /* Ensure it takes full height */
   max-width: 1500px;
   margin: 0 auto;
   width: 100%;
@@ -136,6 +138,10 @@ export default {
   border-bottom: 2px solid #FFD700;
 }
 
+.contact-form textarea {
+  resize: none;
+}
+
 .contact-form button {
   background-color: #ffffff;
   color: black;
@@ -152,8 +158,14 @@ export default {
 .contact-info {
   flex: 1;
   max-width: 300px;
-  text-align: left;
+  text-align: center; /* Center-align text horizontally */
+  display: flex; /* Enable flexbox for vertical alignment */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  height: 100%; /* Ensure it takes full height */
 }
+
 .contact-info h3 {
   margin-bottom: 1rem;
 }
@@ -166,6 +178,21 @@ export default {
 .contact-info a {
   color: inherit;
   text-decoration: none;
+}
+
+.questions {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+
+.questions h3 {
+  margin-bottom: 1rem;
+}
+
+.questions p {
+  margin: 0 0 1rem;
+  color: rgb(175, 173, 173);
 }
 
 .other {
@@ -195,5 +222,40 @@ export default {
   color: rgb(175, 173, 173);
   width: 100%;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 2rem; /* Add spacing between sections */
+    padding: 1rem; /* Add padding for better spacing */
+  }
+
+  .contact-form,
+  .contact-info,
+  .questions {
+    max-width: 100%; /* Ensure sections take full width */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .contact-form h3,
+  .contact-info h3,
+  .questions h3 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .contact-form label {
+    font-size: 1rem; /* Adjust label size */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem; /* Adjust input and textarea font size */
+  }
+
+  .contact-info p,
+  .questions p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
 }
 </style>
