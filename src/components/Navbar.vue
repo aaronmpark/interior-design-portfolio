@@ -48,7 +48,9 @@ export default {
       this.setActive('');
     },
     goHome() {
-      this.$router.push('/');
+      this.$router.push('/').then(() => {
+        this.scrollToTop();
+      });
     },
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;

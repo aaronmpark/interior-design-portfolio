@@ -45,7 +45,6 @@ export default {
 .home-image {
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
   display: block;
 }
 
