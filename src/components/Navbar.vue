@@ -7,7 +7,7 @@
         </router-link>
       </div>
       <ul class="navbar-links">
-        <li v-for="link in navLinks" :key="link.id" @click="setActive(link.title)" :class="{ active: active === link.title }">
+        <li v-for="link in navLinks" :key="link.id" @click="setActive(link.title); scrollToTop()" :class="{ active: active === link.title }">
           <router-link :to="`/${link.id}`">{{ link.title }}</router-link>
         </li>
       </ul>
@@ -18,7 +18,7 @@
       </div>
     </div>
     <ul class="navbar-links-mobile" v-if="isMenuOpen">
-      <li v-for="link in navLinks" :key="link.id" @click="setActive(link.title); toggleMenu()" :class="{ active: active === link.title }">
+      <li v-for="link in navLinks" :key="link.id" @click="setActive(link.title); scrollToTop(); toggleMenu()" :class="{ active: active === link.title }">
         <router-link :to="`/${link.id}`">{{ link.title }}</router-link>
       </li>
     </ul>

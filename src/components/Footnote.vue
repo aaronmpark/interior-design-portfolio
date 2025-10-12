@@ -21,16 +21,16 @@
           <button type="submit">Contact Now</button>
         </form>
       </div>
-        <div class="other">
+      <div class="other">
         <h3>OTHER</h3>
-        <p><a href="/#/about">About Us</a></p>
-        <p><a href="/#/projects">Projects</a></p>
+        <p><router-link to="/about" @click="scrollToTop">About Us</router-link></p>
+        <p><router-link to="/projects" @click="scrollToTop">Projects</router-link></p>
       </div>
     </div>
     <div class="footer-bottom">
-        <a>
-           Copyright &copy; 2025 Golden MS LLC All Rights Reserved.
-        </a>
+      <a>
+        Copyright &copy; 2025 Golden MS LLC All Rights Reserved.
+      </a>
     </div>
   </footer>
 </template>
@@ -72,6 +72,9 @@ export default {
         console.error('Failed to send message:', error);
         alert('Failed to send message. Please try again later.');
       }
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
     }
   }
 };
