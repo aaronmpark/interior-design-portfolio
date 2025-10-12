@@ -23,8 +23,8 @@
       </div>
         <div class="other">
         <h3>OTHER</h3>
-        <p><a href="/about">About Us</a></p>
-        <p><a href="/projects">Projects</a></p>
+        <p><a href="/#/about">About Us</a></p>
+        <p><a href="/#/projects">Projects</a></p>
       </div>
     </div>
     <div class="footer-bottom">
