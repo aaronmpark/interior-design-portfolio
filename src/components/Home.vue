@@ -64,10 +64,11 @@ export default {
   text-align: center; 
   color: white; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
-  transform: translateY(-10%);
+  transform: translateY(0); 
   z-index: 2; 
   opacity: 0;
   animation: fadeIn 1s ease-in forwards; 
+  padding: 1rem;
 }
 
 @keyframes fadeIn {
@@ -80,13 +81,13 @@ export default {
 }
 
 .home-text h1 {
-  font-size: 5rem;
+  font-size: 3rem; 
   margin: 0;
   font-weight: 400;
 }
 
 .home-text h2 {
-  font-size: 2rem;
+  font-size: 1.5rem; 
   margin: 0.5rem 0;
   font-weight: 300;
 }
@@ -111,4 +112,17 @@ export default {
   transform: scale(1.1); 
 }
 
+@media (max-width: 768px) {
+  .home-text {
+    padding: 2rem; 
+  }
+
+  .home-text h1 {
+    font-size: 2.5rem; 
+  }
+
+  .home-text h2 {
+    font-size: 1.2rem; 
+  }
+}
 </style>
