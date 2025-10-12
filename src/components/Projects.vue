@@ -296,4 +296,42 @@ export default {
   color: inherit;
 }
 
+@media (max-width: 768px) {
+  .project-list h1 {
+    font-size: 2rem; 
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; 
+    gap: 1.5rem; 
+  }
+
+  .project-item {
+    font-size: 1rem; 
+    text-align: center; 
+  }
+
+  .project-item ul {
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+
+  .project-item .location {
+    font-size: 0.9rem; 
+  }
+
+  .project-collage h1 {
+    font-size: 1.8rem; 
+    text-align: center;
+  }
+
+  .collage {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 1rem;
+  }
+
+  .collage-image {
+    height: 200px; 
+  }
+}
 </style>
