@@ -183,6 +183,16 @@ export default {
 
   .navbar-toggle {
     display: flex;
+    width: 50px; /* Increased width */
+    height: 50px; /* Increased height */
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  .navbar-toggle span {
+    width: 30px; /* Increased width of the lines */
+    height: 4px; /* Increased height of the lines */
   }
 }
 </style>
