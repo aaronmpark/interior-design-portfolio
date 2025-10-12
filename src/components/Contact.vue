@@ -19,8 +19,8 @@
             </div>
             <div class="contact-info">
                 <h3>CONTACT</h3>
-                <p><a href="mailto:example@email.com">Email: example@email.com</a></p>
-                <p><a href="tel:+1234567890">Phone: +1 (234) 567-890</a></p>
+                <p><a href="mailto:mun6040@gmail.com">Email: mun6040@gmail.com</a></p>
+                <p><a href="tel:+17033380056">Phone: +1 (703) 338-0056</a></p>
             </div>
             <div class="questions">
                 <h3>QUESTIONS?</h3>
