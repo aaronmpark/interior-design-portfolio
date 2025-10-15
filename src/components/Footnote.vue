@@ -3,8 +3,7 @@
     <div class="footnote-container">
       <div class="contact-info">
         <h3>CONTACT</h3>
-        <p><a href="mailto:mun6040@gmail.com">Email: mun6040@gmail.com</a></p>
-        <p><a href="tel:+17033380056">Phone: +1 (703) 338-0056</a></p>
+        <p><a href="mailto:goldenmsllc.com">Email: goldenmsllc.com</a></p>
       </div>
       <div class="contact-form">
         <h3>GET IN TOUCH</h3>
