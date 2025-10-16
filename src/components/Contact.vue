@@ -19,7 +19,7 @@
             </div>
             <div class="contact-info">
                 <h3>CONTACT</h3>
-                <p><a href="mailto:goldenmsllc.com">Email: goldenmsllc.com</a></p>
+                <p><a href="mailto:goldenmsllc@gmail.com">Email: goldenmsllc@gmail.com</a></p>
             </div>
             <div class="questions">
                 <h3>QUESTIONS?</h3>
