@@ -20,6 +20,7 @@
             <div class="contact-info">
                 <h3>CONTACT</h3>
                 <p><a href="mailto:idesign16@gmail.com">Email: idesign16@gmail.com</a></p>
+                <p><a href="tel:+15714899960">Phone: +1 571 489 9960</a></p>
             </div>
             <div class="questions">
                 <h3>QUESTIONS?</h3>
